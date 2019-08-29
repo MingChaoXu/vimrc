@@ -113,30 +113,30 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ ['mode', 'paste'],
-      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ }
+"
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ 'active': {
+"      \   'left': [ ['mode', 'paste'],
+"      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+"      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+"      \ },
+"      \ 'component': {
+"      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+"      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+"      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+"      \ },
+"      \ 'component_visible_condition': {
+"      \   'readonly': '(&filetype!="help"&& &readonly)',
+"      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+"      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+"      \ },
+"      \ 'separator': { 'left': ' ', 'right': ' ' },
+"      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+"      \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
@@ -197,3 +197,18 @@ let g:clang_format#style_options = {
 " => vim-airline plugin
 """"""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
+
+"let g:lightline = {}
+"let g:lightline.component_expand = {
+"      \  'linter_checking': 'lightline#ale#checking',
+"      \  'linter_warnings': 'lightline#ale#warnings',
+"      \  'linter_errors': 'lightline#ale#errors',
+"      \  'linter_ok': 'lightline#ale#ok',
+"      \ }
+"let g:lightline.component_type = {
+"      \     'linter_checking': 'left',
+"      \     'linter_warnings': 'warning',
+"      \     'linter_errors': 'error',
+"      \     'linter_ok': 'left',
+"      \ }
+"let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
