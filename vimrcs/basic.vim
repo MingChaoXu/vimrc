@@ -232,6 +232,18 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
 
+:nn <leader>1 1gt
+:nn <leader>2 2gt
+:nn <leader>3 3gt
+:nn <leader>4 4gt
+:nn <leader>5 5gt
+:nn <leader>6 6gt
+:nn <leader>7 7gt
+:nn <leader>8 8gt
+:nn <leader>9 9gt
+:nn <leader>0 :tablast<CR>
+
+
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>

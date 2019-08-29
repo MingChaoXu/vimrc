@@ -192,3 +192,8 @@ let g:clang_format#style_options = {
             \ "UseTab" : "Never",
             \ "BinPackParameters" : "false",
             \ "AlignAfterOpenBracket" : "AlwaysBreak"}
+
+""""""""""""""""""""""""""""""
+" => vim-airline plugin
+""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
